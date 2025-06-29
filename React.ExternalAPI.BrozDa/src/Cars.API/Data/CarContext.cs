@@ -8,19 +8,7 @@ namespace Cars.API.Data
     {
         public DbSet<Car> Cars { get; set; } = null!;
 
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-           
-            IConfigurationRoot config = new ConfigurationBuilder()
-            .AddUserSecrets<Program>()
-            .Build();
-
-            optionsBuilder.UseSqlite(config["Cars:ConnectionString"]);
-
-            
-
-        }
+        public CarContext(DbContextOptions options) : base(options) { }
 
     }
 }

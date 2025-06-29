@@ -1,5 +1,6 @@
 
 using Cars.API.Data;
+using Cars.API.Installer;
 using Cars.API.Models;
 using Cars.API.Services;
 
@@ -11,8 +12,15 @@ namespace Cars.API
         {
 
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.InitializeApi(builder.Configuration);
 
-            // Add services to the container.
+            var app = builder.Build();
+            app.SetUpDatabase();
+            app.AddMiddleware();
+            
+            app.Run();
+
+            /*// Add services to the container.
             builder.Services.AddAuthorization();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -50,9 +58,7 @@ namespace Cars.API
                 return forecast;
             })
             .WithName("GetWeatherForecast")
-            .WithOpenApi();
-
-            app.Run();
+            .WithOpenApi();*/
         }
     }
 }
