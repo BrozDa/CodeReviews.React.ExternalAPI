@@ -3,7 +3,7 @@ using Cars.API.Data;
 using Cars.API.Installer;
 using Cars.API.Models;
 using Cars.API.Services;
-
+using Cars.API.Endpoints;
 namespace Cars.API
 {
     public class Program
@@ -16,8 +16,8 @@ namespace Cars.API
 
             var app = builder.Build();
             app.SetUpDatabase();
-            app.AddMiddleware();
-            
+            app.AddSwagger();
+            app.AddCarEndpoints();
             app.Run();
 
             /*// Add services to the container.

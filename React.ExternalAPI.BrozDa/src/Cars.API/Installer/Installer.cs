@@ -1,6 +1,7 @@
 ﻿using Cars.API.Data;
 using Cars.API.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace Cars.API.Installer
 {
@@ -9,9 +10,7 @@ namespace Cars.API.Installer
         public static IServiceCollection InitializeApi
             (this IServiceCollection services, IConfigurationRoot configuration)
         {
-            var connectionString = configuration.GetConnectionString("Cars") ?? null;
-
-            if (connectionString is null) { throw new ArgumentNullException("Connection string not found"); }
+            var connectionString = configuration.GetConnectionString("Cars") ?? throw new InvalidOperationException("Missing connection string for 'Cars'.");
 
             services.AddDbContext<CarContext>(options =>
             {
@@ -21,8 +20,6 @@ namespace Cars.API.Installer
 
             services.AddTransient<SeedService>();
 
-            services.AddControllers();
-
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
@@ -30,7 +27,7 @@ namespace Cars.API.Installer
             return services;
 
         }
-        public static WebApplication AddMiddleware(this WebApplication app)
+        public static WebApplication AddSwagger(this WebApplication app)
         {
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -38,11 +35,6 @@ namespace Cars.API.Installer
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
-            app.UseHttpsRedirection();
-
-            app.MapControllers();
-
             return app;
         }
 
@@ -54,14 +46,27 @@ namespace Cars.API.Installer
             var context = services.GetRequiredService<CarContext>();
             context.Database.Migrate();
 
-            var seedService = services.GetRequiredService<SeedService>();
-
-            var cars = seedService.GetSeedData();
-
-            context.Cars.AddRange(cars);
-            context.SaveChanges();
-
-
+            if (!context.Cars.Any())
+            {
+                try
+                {
+                    var seedService = services.GetRequiredService<SeedService>();
+                    var cars = seedService.GetSeedData();
+                    context.Cars.AddRange(cars!);
+                    context.SaveChanges();
+                    Console.WriteLine("[Seed] Database successfully seeded with initial car data.");
+                }
+                catch (Exception ex) when (
+                ex is FileNotFoundException ||
+                ex is IOException ||
+                ex is JsonException)
+                {
+                    Console.WriteLine($"[Seed Error] {ex.GetType().Name}: {ex.Message}");
+                }
+                catch (Exception ex) { 
+                    Console.WriteLine($"[Unhandled Error] {ex.GetType().Name}: {ex.Message}");
+                }
+            }
             return app;
         }
 
