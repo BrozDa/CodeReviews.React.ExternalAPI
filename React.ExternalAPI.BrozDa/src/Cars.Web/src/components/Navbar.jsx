@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <p>Cars</p>
+        <a href="https://www.google.com"><p>🚘 Cars</p></a>
       </div>
     </nav>
   )

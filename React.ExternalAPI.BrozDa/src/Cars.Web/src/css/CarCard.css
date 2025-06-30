@@ -2,8 +2,10 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background-color: hsl(0, 0%, 3%);
-  transition: transform 0.2s;
+  background-color: hsl(0, 0%, 8%);
+  transition: transform 0.2s, 
+              border 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,10 +13,14 @@
 
 .car-card:hover {
   transform: translateY(-5px);
+  border: 3px solid white;
+  box-shadow: 0 0 10px white;
 }
 .car-name{
+  text-align: center;
   padding: 1rem;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 .car-image {
   position: relative;

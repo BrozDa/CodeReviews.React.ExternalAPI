@@ -1,5 +1,19 @@
 .navbar{
   margin: 0;
   padding: 0;
-  background-color: hsl(0, 0%, 22%);
+  height: 4rem;
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  align-items: center;
+}
+.navbar-brand{
+  padding-left: 3rem;
+  font-size: 2rem;
+
+}
+.navbar-brand a{
+  text-decoration: none;
+}
+.navbar-brand a:visited{
+  color: inherit;
 }

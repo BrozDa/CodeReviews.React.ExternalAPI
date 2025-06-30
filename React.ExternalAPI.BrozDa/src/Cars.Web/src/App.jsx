@@ -1,9 +1,11 @@
 
-import Navbar
- from "./components/Navbar"
+import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
-function App() {
+import { useEffect, useState } from "react"
 
+
+function App() {
+   
   return (
     <>
       <header>
