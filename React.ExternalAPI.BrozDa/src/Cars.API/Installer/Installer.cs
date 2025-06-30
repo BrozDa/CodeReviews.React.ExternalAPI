@@ -22,12 +22,13 @@ namespace Cars.API.Installer
 
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddCors();
 
 
             return services;
 
         }
-        public static WebApplication AddSwagger(this WebApplication app)
+        public static WebApplication AddMiddleWare(this WebApplication app)
         {
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -35,6 +36,12 @@ namespace Cars.API.Installer
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors(options =>
+            {
+                options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
+
             return app;
         }
 

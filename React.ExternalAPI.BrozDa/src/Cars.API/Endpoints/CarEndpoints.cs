@@ -14,7 +14,7 @@ namespace Cars.API.Endpoints
             group.MapGet("/", async (CarContext dbContext) =>
             {
                 var result = await dbContext.Cars.OrderBy(x => x.Name).ToListAsync();
-
+                Console.WriteLine(result.Count.ToString());
                 return (result is not null)
                 ? Results.Ok(result)
                 : Results.NotFound();

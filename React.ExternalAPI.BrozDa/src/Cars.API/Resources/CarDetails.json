@@ -1,127 +1,127 @@
 [
   {
     "Name": "Aston Martin Valkyrie",
-    "ImageUrl": "Aston_Martin_Valkyrie.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Aston_Martin_Valkyrie.jpg",
     "Description": "F1-inspired hypercar with extreme aerodynamics and power."
   },
   {
     "Name": "De Tomaso P72",
-    "ImageUrl": "De_Tomaso_P72.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/De_Tomaso_P72.jpg",
     "Description": "Retro-styled hypercar with modern performance flair."
   },
   {
     "Name": "SSC Tuatara",
-    "ImageUrl": "SSC_Tuatara.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/SSC_Tuatara.jpg",
     "Description": "American hypercar aiming for the fastest top speed title."
   },
   {
     "Name": "Apollo Intensa Emozione",
-    "ImageUrl": "Apollo_Intensa_Emozione.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Apollo_Intensa_Emozione.jpg",
     "Description": "Raw, emotional hypercar with a 6.3L V12 engine."
   },
   {
     "Name": "Ferrari Daytona SP3",
-    "ImageUrl": "Ferrari_Daytona_SP3.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Ferrari_Daytona_SP3.jpg",
     "Description": "Limited Ferrari V12 tribute to endurance racing icons."
   },
   {
     "Name": "Aston Martin Vulcan",
-    "ImageUrl": "Aston_Martin_Vulcan.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Aston_Martin_Vulcan.jpg",
     "Description": "Track-only V12 machine with brutal performance."
   },
   {
     "Name": "Bugatti Divo",
-    "ImageUrl": "Bugatti_Divo.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Bugatti_Divo.jpg",
     "Description": "Track-oriented Bugatti with radical aerodynamic upgrades."
   },
   {
     "Name": "Czinger 21C",
-    "ImageUrl": "Czinger_21C.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Czinger_21C.jpg",
     "Description": "3D-printed hybrid hypercar built for extreme performance."
   },
   {
     "Name": "Ferrari LaFerrari",
-    "ImageUrl": "Ferrari_LaFerrari.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Ferrari_LaFerrari.jpg",
     "Description": "Ferrari’s flagship hybrid hypercar with V12 power."
   },
   {
     "Name": "Ferrari SF90 Stradale",
-    "ImageUrl": "Ferrari_SF90_Stradale.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Ferrari_SF90_Stradale.jpg",
     "Description": "Ferrari’s plug-in hybrid supercar with blistering performance."
   },
   {
     "Name": "Hennessey Venom F5",
-    "ImageUrl": "Hennessey_Venom_F5.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Hennessey_Venom_F5.jpg",
     "Description": "Texas-built beast targeting 300+ mph top speeds."
   },
   {
     "Name": "Koenigsegg Jesko Absolut",
-    "ImageUrl": "Koenigsegg_Jesko.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Koenigsegg_Jesko.jpg",
     "Description": "Swedish hypercar engineered for top-speed dominance."
   },
   {
     "Name": "McLaren Speedtail",
-    "ImageUrl": "McLaren_Speedtail.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/McLaren_Speedtail.jpg",
     "Description": "McLaren’s fastest road car ever, with a futuristic design."
   },
   {
     "Name": "McLaren P1",
-    "ImageUrl": "McLaren_P1.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/McLaren_P1.jpg",
     "Description": "Hybrid hypercar that combines stunning power and agility."
   },
   {
     "Name": "Mercedes-AMG One",
-    "ImageUrl": "Mercedes_AMG_Project_One.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Mercedes_AMG_Project_One.jpg",
     "Description": "F1-powered road car with hybrid tech and aero wizardry."
   },
   {
     "Name": "NIO EP9",
-    "ImageUrl": "Nio_EP9.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Nio_EP9.jpg",
     "Description": "Electric supercar with record-setting Nürburgring time."
   },
   {
     "Name": "Pininfarina Battista",
-    "ImageUrl": "Pininfarina_Battista.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Pininfarina_Battista.jpg",
     "Description": "Luxury electric hypercar with brutal speed and grace."
   },
   {
     "Name": "Pagani Huayra R",
-    "ImageUrl": "Pagani_Huayra.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Pagani_Huayra.jpg",
     "Description": "Track-focused Pagani with naturally aspirated V12 fury."
   },
   {
     "Name": "Porsche 918 Spyder",
-    "ImageUrl": "Porsche_918_Spyder.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Porsche_918_Spyder.jpg",
     "Description": "Hybrid supercar that blends power with electric efficiency."
   },
   {
     "Name": "Rimac Nevera",
-    "ImageUrl": "Rimac_Nevera.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Rimac_Nevera.jpg",
     "Description": "Electric hypercar with 1914 hp and lightning-fast acceleration."
   },
   {
     "Name": "Koenigsegg Regera",
-    "ImageUrl": "Koenigsegg_Regera.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Koenigsegg_Regera.jpg",
     "Description": "Hybrid hypercar with a unique direct-drive transmission."
   },
   {
     "Name": "Bugatti Chiron",
-    "ImageUrl": "Bugatti_Chiron.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Bugatti_Chiron.jpg",
     "Description": "Record-breaking hypercar with a top speed over 300 mph."
   },
   {
     "Name": "Lamborghini Revuelto",
-    "ImageUrl": "Lamborghini_Revuelto.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Lamborghini_Revuelto.jpg",
     "Description": "Hybrid V12 supercar with over 1000 hp and striking design."
   },
   {
     "Name": "Lamborghini Centenario",
-    "ImageUrl": "Lamborghini_Centenario.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Lamborghini_Centenario.jpg",
     "Description": "Limited-edition Lambo honoring founder Ferruccio Lamborghini."
   },
   {
     "Name": "Zenvo TSR-S",
-    "ImageUrl": "Zenvo_TSR-S.jpg",
+    "ImageUrl": "https://brozda.github.io/cars/Zenvo_TSR-S.jpg",
     "Description": "Danish hypercar with a dynamic rear wing for cornering."
   }
 ]

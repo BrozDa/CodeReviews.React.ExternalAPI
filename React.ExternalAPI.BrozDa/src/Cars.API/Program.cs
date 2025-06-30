@@ -16,7 +16,7 @@ namespace Cars.API
 
             var app = builder.Build();
             app.SetUpDatabase();
-            app.AddSwagger();
+            app.AddMiddleWare();
             app.AddCarEndpoints();
             app.Run();
 
