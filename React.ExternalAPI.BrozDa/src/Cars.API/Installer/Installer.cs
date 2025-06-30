@@ -10,7 +10,7 @@ namespace Cars.API.Installer
         public static IServiceCollection InitializeApi
             (this IServiceCollection services, IConfigurationRoot configuration)
         {
-            var connectionString = configuration.GetConnectionString("Cars") ?? throw new InvalidOperationException("Missing connection string for 'Cars'.");
+            var connectionString = configuration.GetConnectionString("Cars") ?? throw new InvalidOperationException("[Database Error] Missing connection string for 'Cars'.");
 
             services.AddDbContext<CarContext>(options =>
             {
