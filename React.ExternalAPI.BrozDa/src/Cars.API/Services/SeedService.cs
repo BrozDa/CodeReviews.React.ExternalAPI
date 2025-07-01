@@ -8,7 +8,7 @@ namespace Cars.API.Services
     public class SeedService
     {
 
-        public IEnumerable<Car>? GetSeedData()
+        public IEnumerable<CarDetail>? GetSeedData()
         {
 
             try
@@ -20,7 +20,7 @@ namespace Cars.API.Services
                 if (!File.Exists(path)) { throw new FileNotFoundException("File with seed data not found"); }
 
                 string rawData = File.ReadAllText(path);
-                var cars = JsonSerializer.Deserialize<IEnumerable<Car>>(rawData);
+                var cars = JsonSerializer.Deserialize<IEnumerable<CarDetail>>(rawData);
                 return cars ?? throw new JsonException("Unable to deserialize list with seed data");
 
 

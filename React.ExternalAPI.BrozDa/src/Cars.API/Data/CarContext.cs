@@ -6,7 +6,7 @@ namespace Cars.API.Data
 {
     public class CarContext : DbContext
     {
-        public DbSet<Car> Cars { get; set; } = null!;
+        public DbSet<CarDetail> Cars { get; set; } = null!;
 
         public CarContext(DbContextOptions options) : base(options) { }
 

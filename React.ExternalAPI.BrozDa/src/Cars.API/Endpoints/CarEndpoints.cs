@@ -13,13 +13,14 @@ namespace Cars.API.Endpoints
 
             group.MapGet("/", async (CarContext dbContext) =>
             {
-                var result = await dbContext.Cars.OrderBy(x => x.Name).ToListAsync();
-                Console.WriteLine(result.Count.ToString());
-                return (result is not null)
-                ? Results.Ok(result)
-                : Results.NotFound();
+
+                var result = await dbContext.Cars.AsNoTracking()
+                                                .OrderBy(c => c.Name)
+                                                .Select(c => new CarBrief(c.Id, c.Name, c.ImageUrl))
+                                                .ToListAsync();
+                return Results.Ok(result);
             })
-            .Produces<List<Car>>(StatusCodes.Status200OK)
+            .Produces<List<CarBrief>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound); 
 
             group.MapGet("/{id:Guid}", async (Guid id, CarContext dbContext) =>
@@ -30,7 +31,7 @@ namespace Cars.API.Endpoints
                 ? Results.Ok(result)
                 : Results.NotFound();
             })
-            .Produces<List<Car>>(StatusCodes.Status200OK)
+            .Produces<List<CarDetail>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
             return builder;

@@ -6,9 +6,9 @@
   transition: transform 0.2s, 
               border 0.15s ease-in-out,
               box-shadow 0.15s ease-in-out;
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  height: 100%;
 }
 
 .car-card:hover {
@@ -17,19 +17,22 @@
   box-shadow: 0 0 10px white;
 }
 .car-name{
+  margin-top: 0;
   text-align: center;
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
 }
 .car-image {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 16/9;
   width: 100%;
 }
 
 .car-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 95%;
+  height: 95%;
+  object-fit:scale-down;
 }

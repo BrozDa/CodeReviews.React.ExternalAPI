@@ -17,7 +17,7 @@ function Home() {
         setCarList(cars);
       } catch (err) {
         console.log(err);
-        setError("Failed to load movies...");
+        setError("Failed to load cars...");
       } finally {
         setLoading(false);
       }
@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
     <div className="cars-grid">
-      {carList.map(c => <CarCard key={c.id} carName={c.name} imgUrl={c.imageUrl}/>)}
+      {carList.map(c => <CarCard key={c.id} carId={c.id} carName={c.name} imgUrl={c.imageUrl}/>)}
     </div>
     
     </>

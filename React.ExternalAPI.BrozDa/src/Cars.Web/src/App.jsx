@@ -1,9 +1,6 @@
 
 import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import { useEffect, useState } from "react"
-
-
+import AppRoutes from "./appRoutes/AppRoutes"
 function App() {
    
   return (
@@ -11,10 +8,7 @@ function App() {
       <header>
         <Navbar />
       </header>
-       <main className="main-content">
-           <Home />
-       </main>
-     
+      <AppRoutes />
     </>
   )
 }
