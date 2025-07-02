@@ -8,7 +8,7 @@ function Home() {
 
   const [carList,setCarList] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [error, setError] = useState(null);
 
   useEffect(()=>{
     const loadCars = async () => {
@@ -24,6 +24,9 @@ function Home() {
     };
     loadCars();
     },[]);
+    
+    if (loading) return <Loading/>;
+    
   return (
     <>
     <div className="cars-grid">

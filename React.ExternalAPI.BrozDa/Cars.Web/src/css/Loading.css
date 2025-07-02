@@ -1,0 +1,29 @@
+.loading-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  gap: 1rem;
+}
+.loading-container p{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.loading-container img{
+  width: 3rem;
+  height: 3rem;
+  animation: rotate 2s infinite;
+  
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
