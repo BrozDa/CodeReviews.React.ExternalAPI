@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { getCarByID } from '../services/api';
 import { useEffect, useState } from 'react';
+
 import CarDetail from '../components/CarDetail';
 import Loading from '../components/Loading';
+import Error from '../components/Error';
 
 function CarPage() {
 
@@ -26,7 +28,7 @@ function CarPage() {
       loadCarDetails();
       },[]);
 
-  if (error) return <p>{error}</p>;
+  if (error) return <Error errorMsg={error}/>;
   if (loading) return <Loading/>;
 
 return (

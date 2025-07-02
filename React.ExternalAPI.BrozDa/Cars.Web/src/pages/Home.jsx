@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import CarCard from "../components/CarCard"
 import "../css/Home.css"
 import { getCars } from '../services/api';
-
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 function Home() {
 
@@ -25,8 +26,9 @@ function Home() {
     loadCars();
     },[]);
     
+    if (error) return <Error errorMsg={error}/>;
     if (loading) return <Loading/>;
-    
+
   return (
     <>
     <div className="cars-grid">
